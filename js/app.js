@@ -176,15 +176,14 @@ function createTripElement(trip) {
 
     getStatus.onsuccess = () => {
       isLiked = getStatus.result !== undefined && getStatus.result !== null;
-      if(isLiked) {
-        unfilledStar.src = 'assets/svg/heart.svg'
+      if (isLiked) {
+        unfilledStar.src = "assets/svg/heart.svg";
       } else {
-        unfilledStar.src = 'assets/svg/unfilledStar.svg'
+        unfilledStar.src = "assets/svg/unfilledStar.svg";
       }
-      
+
       unfilledStar.style.display = isLiked ? "block" : "hidden";
     };
-    
 
     getStatus.onerror = () => {
       console.log("error");
@@ -223,10 +222,10 @@ function createTripElement(trip) {
     getSavedTrips(db);
 
     unfilledStar.addEventListener("click", () => {
-      if(isLiked) {
-        unfilledStar.src = 'assets/svg/unfilledStar.svg'
+      if (isLiked) {
+        unfilledStar.src = "assets/svg/unfilledStar.svg";
       } else {
-        unfilledStar.src = 'assets/svg/heart.svg'
+        unfilledStar.src = "assets/svg/heart.svg";
       }
 
       const tx = db.transaction("savedTrips", "readwrite");
