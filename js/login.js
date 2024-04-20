@@ -7,7 +7,7 @@ request.onerror = function (event) {
 };
 
 request.onsuccess = function (event) {
-  console.log("Database opened successfully");
+
   const db = event.target.result;
 
   loginForm.addEventListener("submit", function (e) {
@@ -45,5 +45,4 @@ request.onsuccess = function (event) {
 request.onupgradeneeded = function (event) {
   const db = event.target.result;
   const objectStore = db.createObjectStore("users", { keyPath: "email" });
-  console.log("Object store created");
 };
