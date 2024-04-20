@@ -44,11 +44,35 @@
               Careers
             </li>
           </a>
-          <a href="contact.html">
-            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-              Contact
-            </li>
-          </a>
+          <button
+            class="border w-10 h-10 flex items-center justify-center text-lg rounded-full border-yellow-500 relative"
+            id="accountBtn"
+          >
+            <span>S</span>
+          </button>
+
+          <div
+            class="flex flex-col gap-3 bg-white absolute bottom-34 text-black p-2 rounded-md top-16 right-2 md:right-8 z-50 transition ease-in-out"
+            id="dropdownMenu"
+          >
+            <a href="account.html">
+              <div class="flex gap-2 h-full hover:bg-gray-300 rounded-lg p-2">
+                <img src="assets/svg/person.svg" class="w-[20px]" alt="" />
+                <span>My account</span>
+              </div>
+            </a>
+
+            <a href="trip.html">
+              <div class="flex gap-2 h-full hover:bg-gray-300 p-2 rounded-lg">
+                <img
+                  src="assets/svg/unfilledStar.svg"
+                  class="w-[20px]"
+                  alt=""
+                />
+                <span>Saved trips</span>
+              </div>
+            </a>
+          </div>
         </ul>
       </nav>
 

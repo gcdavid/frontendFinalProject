@@ -35,3 +35,37 @@ navToggle.addEventListener("click", () => {
     openMenu();
   }
 });
+
+//tab functionality
+function changeTab(evt, menu) {
+  let i, tabContent, tablinks;
+
+  tabContent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(menu).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+const accountBtn = document.getElementById("accountBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+let isOpen = false;
+accountBtn.addEventListener("click", () => {
+  if (isOpen) {
+    dropdownMenu.classList.remove("hidden");
+    dropdownMenu.classList.add("block");
+  } else {
+    dropdownMenu.classList.remove("block");
+    dropdownMenu.classList.add("hidden");
+  }
+  isOpen = !isOpen;
+});
