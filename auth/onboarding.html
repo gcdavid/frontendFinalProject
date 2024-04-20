@@ -65,6 +65,8 @@
           />
         </div>
 
+
+
         <div class="mb-4">
           <label class="font-semibold text-lg">Gender:</label>
           <div class="flex flex-col gap-1">
@@ -147,6 +149,46 @@
         form.reset();
         progressBar.value = 0;
       }
+
+      // Check if the browser supports getUserMedia API
+// Check if the browser supports getUserMedia API
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  // Get captured image element and capture button
+  const capturedImage = document.getElementById('capturedImage');
+  const captureButton = document.getElementById('captureButton');
+
+  // Capture photo
+  captureButton.addEventListener('click', function() {
+    // Access the camera and capture photo
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function(stream) {
+        const video = document.createElement('video');
+        video.srcObject = stream;
+        video.onloadedmetadata = function() {
+          // Create a canvas element to draw the video frame
+          const canvas = document.createElement('canvas');
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          const context = canvas.getContext('2d');
+          context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+          // Stop the video stream
+          const tracks = stream.getTracks();
+          tracks.forEach(function(track) {
+            track.stop();
+          });
+
+          // Set the captured photo as the source of the image element
+          capturedImage.src = canvas.toDataURL('image/png');
+        };
+      })
+      .catch(function(error) {
+        console.error('Error accessing camera: ', error);
+      });
+  });
+} else {
+  console.error('getUserMedia is not supported in this browser');
+}
     </script>
   </body>
 </html>
