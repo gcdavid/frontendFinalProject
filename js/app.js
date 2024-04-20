@@ -93,7 +93,7 @@ const data = [
   {
     id: 1,
     image:
-      "https://a0.muscache.com/im/pictures/miso/Hosting-48125607/original/b9c4b62f-c00b-474f-a0cf-82b8203ad890.jpeg?im_w=320",
+      "https://cf.bstatic.com/xdata/images/hotel/square600/121402222.webp?k=f7f266ab09f90ddea4464309eca14d79429afe4218ced6887cb52f82c42c03dc&o=",
     location: "Barrie, Canada",
     rating: 4.71,
     price: 100,
@@ -102,7 +102,7 @@ const data = [
   {
     id: 2,
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/121402222.webp?k=f7f266ab09f90ddea4464309eca14d79429afe4218ced6887cb52f82c42c03dc&o=",
+      "https://images.unsplash.com/photo-1547401061-7fbd33ec9021?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vbnRyZWFsfGVufDB8fDB8fHww",
     location: "Toronto, Canada",
     rating: 5,
     price: 120,
@@ -111,7 +111,7 @@ const data = [
   {
     id: 3,
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/121402222.webp?k=f7f266ab09f90ddea4464309eca14d79429afe4218ced6887cb52f82c42c03dc&o=",
+      "https://images.unsplash.com/photo-1545956146-d70420cd4320?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     location: "Toronto, Canada",
     rating: 5,
     price: 200,
@@ -120,7 +120,7 @@ const data = [
   {
     id: 4,
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/square600/121402222.webp?k=f7f266ab09f90ddea4464309eca14d79429afe4218ced6887cb52f82c42c03dc&o=",
+      "https://plus.unsplash.com/premium_photo-1672115680945-7fab8f469b55?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     location: "Toronto, Canada",
     rating: 5,
     price: 320,

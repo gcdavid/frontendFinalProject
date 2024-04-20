@@ -231,6 +231,7 @@ function deleteSavedTrip(db, tripId) {
 function renderUpdatedTrips(trips) {
   const tripListElement = document.getElementById("saved-trip");
 
+  window.location.reload()
   //Clear the static data
   while (tripListElement.firstChild) {
     tripListElement.removeChild(tripListElement.firstChild);
