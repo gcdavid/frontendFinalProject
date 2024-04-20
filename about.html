@@ -3,53 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="app.js" defer></script>
+    <script src="js/app.js" defer></script>
     <title>About page</title>
   </head>
   <body>
     <nav
-      class="nav w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-2 md:px-16"
+      class="nav w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-2 md:p-8 text-md"
     >
       <a href="index.html">
         <h2 class="text-center text-xl font-bold cursor-pointer">
           Booking group
         </h2>
       </a>
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="nav"
-        aria-expanded="false"
-      >
-        <img src="menu.svg" alt="menu" id="menu-img" />
-      </button>
-      <ul
-        role="list"
-        data-visible="false"
-        class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
-      >
-        <a href="index.html">
+
+      <div class="flex gap-8 items-center">
+        <button
+          class="mobile-nav-toggle order-last"
+          aria-controls="nav"
+          aria-expanded="false"
+        >
+          <img src="assets/svg/menu.svg" alt="menu" id="menu-img" />
+        </button>
+        <ul
+          role="list"
+          data-visible="false"
+          class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
+        >
+          <!-- <a href="index.html"> -->
           <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
             Home
           </li>
+          <!-- </a> -->
+          <a href="about.html">
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              About
+            </li>
+          </a>
+          <a href="careers.html">
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              Careers
+            </li>
+          </a>
+        </ul>
+        <button
+          class="border w-10 h-10 flex items-center justify-center text-lg rounded-full border-yellow-500 relative"
+          id="accountBtn"
+        >
+          <span>S</span>
+        </button>
+      </div>
+
+      <div
+        class="flex flex-col gap-3 bg-white absolute bottom-34 text-black p-2 rounded-md top-16 right-20 md:right-8 z-50 transition ease-in-out"
+        id="dropdownMenu"
+      >
+        <a href="account.html">
+          <div class="flex gap-2 h-full hover:bg-gray-300 rounded-lg p-2">
+            <img src="assets/svg/person.svg" class="w-[20px]" alt="" />
+            <span>My account</span>
+          </div>
         </a>
-        <a href="about.html">
-          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-            About
-          </li>
+
+        <a href="trip.html">
+          <div class="flex gap-2 h-full hover:bg-gray-300 p-2 rounded-lg">
+            <img src="assets/svg/unfilledStar.svg" class="w-[20px]" alt="" />
+            <span>Saved trips</span>
+          </div>
         </a>
-        <a href="careers.html">
-          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-            Careers
-          </li>
-        </a>
-        <a href="contact.html">
-          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-            Contact
-          </li>
-        </a>
-      </ul>
+      </div>
     </nav>
     <main>
       <video autoplay loop muted>
