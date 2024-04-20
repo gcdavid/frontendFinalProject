@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>My Account</title>
+  </head>
+  <body>
+    <main>
+      <nav
+        class="w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-2 md:px-16"
+      >
+        <h2 class="text-center text-xl font-bold">Booking group</h2>
+        <!-- <div class="h-[56px] w-[56px] rounded-full overflow-hidden">
+        <img src="man.jpg" class="h-full w-full object-contain" />
+      </div> -->
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="nav"
+          aria-expanded="false"
+        >
+          <img src="menu.svg" alt="menu" />
+        </button>
+        <ul
+          rolee="list"
+          data-visible="false"
+          class="nav-list py-4 font-[400] cursor-pointer text-sm hidden md:flex items-center justify-center gap-6"
+        >
+          <li
+            class="nav-item bg-[#1a4fa0] border py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]"
+          >
+            Home
+          </li>
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            About
+          </li>
+          <li class="nav-item px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Services
+          </li>
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Contact
+          </li>
+        </ul>
+      </nav>
+
+      <section class="p-2 sm:p-8 md:p-12">
+        <div
+          class="tab float-left border border-gray-200 py-4 h-[600px] sm:p-4 w-[30%] h-[600px] sm:h-[440px] mr-8"
+        >
+          <button
+            class="tablinks w-full transition duration-1000 ease-in-out"
+            onclick="changeTab(event, 'Account')"
+            id="defaultOpen"
+          >
+            Personal details
+          </button>
+
+          <hr class="my-4" />
+
+          <button
+            class="tablinks w-full transition duration-1000 ease-in-out"
+            onclick="changeTab(event, 'Reservations')"
+          >
+            Your reservations
+          </button>
+        </div>
+
+        <div
+          class="border border-gray-200 h-[600px] sm:h-[440px] md:h-full p-4 tabcontent transition ease-in-out duration-1000"
+          id="Account"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-2xl font-bold">Personal details</h2>
+              <span class="text-gray-700">Update your info down below.</span>
+            </div>
+            <div class="h-[60px] w-[60px]">
+              <img
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="avatar"
+                class="w-[120px] sm:w-[60px] sm:h-[60px] rounded-full border-2 border-yellow-500"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-8 mt-8">
+            <div class="">
+              <span class="inline-block w-[50%] sm:w-[30%]">Name</span>
+              <span class="text-gray-800 text-sm"> John Doe</span>
+            </div>
+
+            <div>
+              <span class="inline-block w-[50%] sm:w-[30%]">
+                Email address</span
+              >
+              <span class="text-gray-800 text-sm"> doejohn2009@gmail.com</span>
+              <span class="text-white bg-green-700 text-[12px] p-1 rounded-sm"
+                >verified</span
+              >
+            </div>
+
+            <div>
+              <span class="inline-block w-[50%] sm:w-[30%]"> Phone number</span>
+              <span class="text-gray-800 text-sm">416-123-4567</span>
+            </div>
+
+            <div>
+              <span class="inline-block w-[50%] sm:w-[30%]"> Nationality</span>
+              <span class="text-gray-800 text-sm">Canada</span>
+            </div>
+
+            <div>
+              <span class="inline-block w-[50%] sm:w-[30%]"> Gender</span>
+              <span class="text-gray-800 text-sm">Male</span>
+            </div>
+
+            <div>
+              <span class="inline-block w-[50%] sm:w-[30%]">Address</span>
+              <span class="text-gray-800 text-sm">Ellesmere Rd</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="Reservations"
+          class="tabcontent h-[420px] hidden border border-gray-200 p-4 transition ease-in-out duration-1000"
+        >
+          <h3 class="text-3xl font-semibold">Oops! You have no reservations</h3>
+        </div>
+      </section>
+
+      <footer class="bg-[#0d2857] text-white font-semibold px-4 py-8 md:px-16">
+        <div class="grid grid-cols-2 gap-12 justify-between md:flex">
+          <div>
+            <h3 class="mb-4">Contact us</h3>
+            <div class="flex flex-col gap-4">
+              <h3>Toll Free Customer Care</h3>
+              <h3>+(1) 123 456 7890</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Comapny</h3>
+            <ul class="flex flex-col gap-4">
+              <li>About us</li>
+              <li>Careeres</li>
+              <li>Blog</li>
+              <li>Press</li>
+              <li>Gift Cards</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Support</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Contact</li>
+              <li>Legal Notice</li>
+              <li>Privacy Policy</li>
+              <li>Terms and Conditions</li>
+              <li>Sitemap</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Other Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Car hire</li>
+              <li>Activity Finder</li>
+              <li>Tour List</li>
+              <li>Flight finder</li>
+              <li>Cruise Ticket</li>
+              <li>Holiday Rental</li>
+              <li>Travel Agents</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Mobile</h3>
+
+            <div
+              class="border py-4 px-2 mb-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img src="apple.svg" alt="apple icon" class="h-[32px] w-[32px]" />
+              <span>Download on the Apple Store</span>
+            </div>
+
+            <div
+              class="border py-4 px-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="google.svg"
+                alt="google icon"
+                class="h-[32px] w-[32px] rounded-[8px]"
+              />
+              <span>Get in the Google Play</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="flex flex-col gap-4 justify-between md:flex-row">
+          <span>&#169; 2024 by David & Raju All rights reserved.</span>
+          <div class="flex gap-8">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Site Map</span>
+          </div>
+          <div class="flex gap-6">
+            <img
+              src="instagram.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="facebook.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="indeed.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
