@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration/Login Page</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-blue-900 px-8 md:px-16">
+      <h2 class="text-white h-16 text-xl font-bold flex items-center">
+        Booking group
+      </h2>
+    </nav>
+    <div class="p-8 md:px-16 md:py-12">
+      <!-- Progress bar -->
+      <div class="py-4 flex justify-between items-center gap-3 mb-4">
+        <span class="font-semibold text-lg flex-1">Progress Bar: </span>
+        <progress
+          id="progress"
+          value="0"
+          max="100"
+          class="my-2 flex-1 border h-2 rounded-full"
+        ></progress>
+      </div>
+      <form class="max-w-lg" id="register" oninput="updateProgress()">
+        <div class="mb-4 flex flex-col">
+          <label class="font-semibold text-lg">Enter your E-mail address</label>
+          <input
+            type="email"
+            placeholder="Email"
+            class="input-field p-2 my-2 rounded-lg"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="mb-4 flex flex-col">
+          <label class="font-semibold text-lg">Enter your personal URL</label>
+          <input
+            type="url"
+            placeholder="Personal URL"
+            class="input-field p-2 my-2 rounded-lg"
+            name="personal-url"
+            required
+          />
+        </div>
+
+        <div class="mb-4 flex flex-col">
+          <label class="font-semibold text-lg">Enter your year of birth</label>
+          <input
+            type="number"
+            placeholder="Year of birth"
+            class="input-field p-2 my-2 rounded-lg"
+            name="dob"
+            min="1900"
+            max="2024"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="font-semibold text-lg">Gender:</label>
+          <div class="flex flex-col gap-1">
+            <label class="mr-4"
+              ><input type="radio" name="gender" value="male" required />
+              Male</label
+            >
+            <label class="mr-4"
+              ><input type="radio" name="gender" value="female" /> Female</label
+            >
+            <label
+              ><input type="radio" name="gender" value="other" /> Other</label
+            >
+          </div>
+        </div>
+
+        <div class="mb-4 flex flex-col">
+          <label class="font-semibold text-lg">Comments:</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            class="input-field p-2 my-2 rounded-lg"
+            required
+          ></textarea>
+        </div>
+
+        <label class="flex items-center mb-4">
+          <input type="checkbox" id="confirm" required class="mr-2" /> I confirm
+          that the data entered are not fictitious.
+        </label>
+
+        <div class="mb-4 flex gap-4">
+          <button
+            type="submit"
+            class="cursor-pointer bg-blue-900 text-white py-2 px-4 rounded-lg"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            onclick="clearForm()"
+            class="border border-red-900 py-2 px-4 rounded-lg bg-transparent text-red-900 hover:bg-red-900 hover:text-white"
+          >
+            Clear All
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("register");
+      const progressBar = document.getElementById("progress");
+
+      function updateProgress() {
+        const filledFields = form.querySelectorAll(
+          'input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="radio"]:checked, input[type="checkbox"],textarea, select'
+        );
+
+        const totalFields = 6;
+
+        let filledFieldCount = 0;
+        filledFields.forEach((filledField) => {
+          if (filledField.value.trim() != "") {
+            filledFieldCount++;
+            console.log(filledFieldCount);
+          }
+        });
+        const progress = (filledFieldCount / totalFields) * 100;
+        progressBar.value = progress;
+      }
+
+      form.addEventListener("submit", (e) => {
+        console.log(e.preventDefault());
+        console.log("f");
+        window.location.href = "../index.html";
+      });
+
+      function clearForm() {
+        form.reset();
+        progressBar.value = 0;
+      }
+    </script>
+  </body>
+</html>
