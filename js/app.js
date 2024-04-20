@@ -58,14 +58,32 @@ function changeTab(evt, menu) {
 
 const accountBtn = document.getElementById("accountBtn");
 const dropdownMenu = document.getElementById("dropdownMenu");
+
+// Initialize isOpen based on the value stored in localStorage
 let isOpen = false;
-accountBtn.addEventListener("click", () => {
-  if (isOpen) {
-    dropdownMenu.classList.remove("hidden");
-    dropdownMenu.classList.add("block");
-  } else {
+
+function toggleDropdown() {
+  // Toggle the visibility of the dropdown menu
+
+  if (!isOpen) {
     dropdownMenu.classList.remove("block");
     dropdownMenu.classList.add("hidden");
   }
+
+  if (isOpen) {
+    dropdownMenu.classList.remove("hidden");
+    dropdownMenu.classList.add("block");
+  }
+
+  // Toggle the state of isOpen
   isOpen = !isOpen;
-});
+
+  // Store the updated state in localStorage
+  localStorage.setItem("dropdownOpen", isOpen.toString());
+}
+
+// Initial setup
+toggleDropdown();
+
+// Event listener
+accountBtn.addEventListener("click", toggleDropdown);

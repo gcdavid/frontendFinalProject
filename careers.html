@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Careers</title>
+  </head>
+  <body>
+    <main>
+      <nav
+        class="nav w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-4 md:p-8 text-md"
+      >
+        <a href="index.html">
+          <h2 class="text-center text-xl font-bold cursor-pointer">
+            Booking group
+          </h2>
+        </a>
+
+        <div class="flex gap-8 items-center">
+          <button
+            class="mobile-nav-toggle order-last"
+            aria-controls="nav"
+            aria-expanded="false"
+          >
+            <img src="assets/svg/menu.svg" alt="menu" id="menu-img" />
+          </button>
+          <ul
+            role="list"
+            data-visible="false"
+            class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
+          >
+            <!-- <a href="index.html"> -->
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              Home
+            </li>
+            <!-- </a> -->
+            <a href="about.html">
+              <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+                About
+              </li>
+            </a>
+            <a href="careers.html">
+              <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+                Careers
+              </li>
+            </a>
+          </ul>
+          <button
+            class="border w-10 h-10 flex items-center justify-center text-lg rounded-full border-yellow-500 relative"
+            id="accountBtn"
+          >
+            <span>S</span>
+          </button>
+        </div>
+
+        <div
+          class="flex flex-col gap-3 bg-white absolute bottom-34 text-black p-2 rounded-md top-16 right-20 md:right-8 z-50 transition ease-in-out"
+          id="dropdownMenu"
+        >
+          <a href="account.html">
+            <div class="flex gap-2 h-full hover:bg-gray-300 rounded-lg p-2">
+              <img src="assets/svg/person.svg" class="w-[20px]" alt="" />
+              <span>My account</span>
+            </div>
+          </a>
+
+          <a href="trip.html">
+            <div class="flex gap-2 h-full hover:bg-gray-300 p-2 rounded-lg">
+              <img src="assets/svg/unfilledStar.svg" class="w-[20px]" alt="" />
+              <span>Saved trips</span>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div
+        class="h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-10 pt-48 bg-[#051036] text-center px-4"
+      >
+        <h2 class="text-6xl font-bold text-white">Join our team!</h2>
+        <div class="text-white font-semibold">
+          <button
+            class="bg-[#003b95] p-4 text-xl w-[200px] rounded-[8px] mb-4 md:mr-4"
+          >
+            Connect
+          </button>
+          <button class="bg-[#003b95] p-4 text-xl w-[200px] rounded-[8px]">
+            Job openings
+          </button>
+        </div>
+        <div
+          class="border-2 border-white-200 h-[40px] w-[40px] rounded-full flex items-center justify-center cursor-pointer animate-bounce"
+        >
+          <a href="#ready">
+            <img
+              src="assets/svg/down-arrow-3101.svg"
+              alt="arrow-down"
+              class="h-[20px] w-[20px]"
+            />
+          </a>
+        </div>
+      </div>
+
+      <footer class="bg-[#0d2857] text-white font-semibold px-4 py-8 md:px-8">
+        <div class="grid grid-cols-2 gap-12 justify-between md:flex">
+          <div>
+            <h3 class="mb-4">Contact us</h3>
+            <div class="flex flex-col gap-4">
+              <h3>Toll Free Customer Care</h3>
+              <a href="tel: +1234567890">
+                <h3>+(1) 123 456 7890</h3>
+              </a>
+              <a href="mailto: support@booking.com">
+                <h3>support@booking.com</h3>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Comapny</h3>
+            <ul class="flex flex-col gap-4">
+              <li>About us</li>
+              <li>Careeres</li>
+              <li>Blog</li>
+              <li>Press</li>
+              <li>Gift Cards</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Support</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Contact</li>
+              <li>Legal Notice</li>
+              <li>Privacy Policy</li>
+              <li>Terms and Conditions</li>
+              <li>Sitemap</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Other Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Car hire</li>
+              <li>Activity Finder</li>
+              <li>Tour List</li>
+              <li>Flight finder</li>
+              <li>Cruise Ticket</li>
+              <li>Holiday Rental</li>
+              <li>Travel Agents</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Mobile</h3>
+
+            <div
+              class="border py-4 px-2 mb-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="assets/svg/apple.svg"
+                alt="apple icon"
+                class="h-[32px] w-[32px]"
+              />
+              <span>Download on the Apple Store</span>
+            </div>
+
+            <div
+              class="border py-4 px-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="assets/svg/google.svg"
+                alt="google icon"
+                class="h-[32px] w-[32px] rounded-[8px]"
+              />
+              <span>Get in the Google Play</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="flex flex-col gap-4 justify-between md:flex-row">
+          <span>&#169; 2024 by David & Raju All rights reserved.</span>
+          <div class="flex gap-8">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Site Map</span>
+          </div>
+          <div class="flex gap-6">
+            <img
+              src="assets/img/facebook.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="assets/img/instagram.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="assets/img/indeed.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
