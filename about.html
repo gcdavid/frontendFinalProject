@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
+    <title>About</title>
+  </head>
+  <body>
+    <nav
+      class="nav w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-2 md:px-16"
+    >
+      <a href="index.html">
+        <h2 class="text-center text-xl font-bold cursor-pointer">
+          Booking group
+        </h2>
+      </a>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="nav"
+        aria-expanded="false"
+      >
+        <img src="menu.svg" alt="menu" id="menu-img" />
+      </button>
+      <ul
+        role="list"
+        data-visible="false"
+        class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
+      >
+        <a href="index.html">
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Home
+          </li>
+        </a>
+        <a href="about.html">
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            About
+          </li>
+        </a>
+        <a href="careers.html">
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Careers
+          </li>
+        </a>
+        <a href="contact.html">
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Contact
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <main>
+      <video autoplay loop muted>
+        <source
+          src="https://s202.q4cdn.com/757635260/files/videos/home-bg-final.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <div class="flex flex-col px-8 py-12 gap-4 md:flex-row">
+        <div class="flex flex-col items-center">
+          <img
+            src="https://s202.q4cdn.com/757635260/files/images/2020/home-travel-with-us.png"
+            class="h-28 md:h-40"
+          />
+          <h2
+            class="text-purple-900 font-bold my-4 cursor-pointer hover:text-black"
+          >
+            Travel With Us
+          </h2>
+          <p class="text-sm text-center">
+            No matter who you are, or where you are going, our travel brands
+            help every type of traveler not only find the trip that’s right for
+            them, but get the best value every time.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <img
+            src="https://s202.q4cdn.com/757635260/files/images/2020/home-partner-with-us.png"
+            class="h-28 md:h-40"
+          />
+          <h2
+            class="text-purple-900 font-bold my-4 cursor-pointer hover:text-black"
+          >
+            Partner With Us
+          </h2>
+          <p class="text-sm text-center">
+            We connect partners big and small to the universe of travelers,
+            giving access to data, tools and technology that empowers, maximizes
+            potential and builds their business.
+          </p>
+        </div>
+      </div>
+
+      <footer class="bg-[#0d2857] text-white font-semibold px-4 py-8 md:px-16">
+        <div class="grid grid-cols-2 gap-12 justify-between md:flex">
+          <div>
+            <h3 class="mb-4">Contact us</h3>
+            <div class="flex flex-col gap-4">
+              <h3>Toll Free Customer Care</h3>
+              <h3>+(1) 123 456 7890</h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Comapny</h3>
+            <ul class="flex flex-col gap-4">
+              <li>About us</li>
+              <li>Careeres</li>
+              <li>Blog</li>
+              <li>Press</li>
+              <li>Gift Cards</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Support</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Contact</li>
+              <li>Legal Notice</li>
+              <li>Privacy Policy</li>
+              <li>Terms and Conditions</li>
+              <li>Sitemap</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Other Services</h3>
+            <ul class="flex flex-col gap-4">
+              <li>Car hire</li>
+              <li>Activity Finder</li>
+              <li>Tour List</li>
+              <li>Flight finder</li>
+              <li>Cruise Ticket</li>
+              <li>Holiday Rental</li>
+              <li>Travel Agents</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="mb-4">Mobile</h3>
+
+            <div
+              class="border py-4 px-2 mb-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img src="apple.svg" alt="apple icon" class="h-[32px] w-[32px]" />
+              <span>Download on the Apple Store</span>
+            </div>
+
+            <div
+              class="border py-4 px-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="google.svg"
+                alt="google icon"
+                class="h-[32px] w-[32px] rounded-[8px]"
+              />
+              <span>Get in the Google Play</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="flex flex-col gap-4 justify-between md:flex-row">
+          <span>&#169; 2024 by David & Raju All rights reserved.</span>
+          <div class="flex gap-8">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Site Map</span>
+          </div>
+          <div class="flex gap-6">
+            <img
+              src="instagram.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="facebook.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="indeed.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
