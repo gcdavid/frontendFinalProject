@@ -40,6 +40,7 @@ request.onsuccess = function (event) {
       alert(`User with ${email} created.`);
       // Clear the form after successful submission
       registerForm.reset();
+      window.location.href = "onboarding.html"
     };
 
     request.onerror = function (event) {
