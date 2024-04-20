@@ -3,9 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hotel Management System</title>
   </head>
   <body>
-    <h2>Home page</h2>
+    <main>
+      <nav
+        class="nav w-full bg-[#051036] text-white h-[80px] py-2 flex items-center justify-between px-2 md:p-8 text-md"
+      >
+        <a href="index.html">
+          <h2 class="text-center text-xl font-bold cursor-pointer">
+            Booking group
+          </h2>
+        </a>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="nav"
+          aria-expanded="false"
+        >
+          <img src="assets/svg/menu.svg" alt="menu" id="menu-img" />
+        </button>
+        <ul
+          role="list"
+          data-visible="false"
+          class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
+        >
+          <!-- <a href="index.html"> -->
+          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+            Home
+          </li>
+          <!-- </a> -->
+          <a href="about.html">
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              About
+            </li>
+          </a>
+          <a href="careers.html">
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              Careers
+            </li>
+          </a>
+          <a href="contact.html">
+            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+              Contact
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </main>
+    <script src="js/app.js"></script>
   </body>
 </html>
