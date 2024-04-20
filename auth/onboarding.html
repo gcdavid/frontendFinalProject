@@ -121,7 +121,7 @@
 
       function updateProgress() {
         const filledFields = form.querySelectorAll(
-          'input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="radio"]:checked, input[type="checkbox"],textarea, select'
+          'input[type="text"], input[type="email"], input[type="url"], input[type="date"], input[type="radio"]:checked, input[type="checkbox"],textarea, select'
         );
 
         const totalFields = 6;
@@ -140,7 +140,7 @@
       form.addEventListener("submit", (e) => {
         console.log(e.preventDefault());
         console.log("f");
-        window.location.href = "../index.html";
+        window.location.href = "login.html";
       });
 
       function clearForm() {
