@@ -3,7 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="bg-[#003b95] px-2">
+      <h2 class="text-white h-[60px] text-xl font-bold px-2 py-4">
+        Booking.com
+      </h2>
+    </nav>
+    <form
+      class="flex flex-col justify-center items-center h-full py-12"
+      id="login"
+    >
+      <h2 class="text-4xl font-bold mb-4 w-[350px]">Welcome back.</h2>
+      <div class="flex flex-col mb-4">
+        <label class="font-[500] mb-2">Email address</label>
+        <input
+          type="text"
+          placeholder="Email"
+          class="border-2 border-[#e0e0e0]-600 h-[45px] rounded-[5px] w-[350px] p-2 font-[400]"
+          name="email"
+        />
+      </div>
+
+      <div class="flex flex-col mb-4">
+        <label class="font-[500] mb-2">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          class="border-2 border-[#e0e0e0]-600 rounded-[5px] h-[45px] w-[350px] p-2 font-[400]"
+          name="password"
+        />
+      </div>
+
+      <div class="flex flex-col w-[350px]">
+        <button
+          class="bg-[#006ce4] text-white px-4 py-2 rounded-[40px] text-xl"
+        >
+          Sign in
+        </button>
+      </div>
+    </form>
+
+    <div class="text-sm text-center mb-8 font-normal">
+      <span>Don't have an account yet?</span>
+      <a href="register.html">
+        <span class="text-blue-600 hover:cursor-pointer hover:underline"
+          >Create your account</span
+        >
+      </a>
+    </div>
+
+    <div>
+      <p class="text-xs max-w-[350px] text-center mx-auto">
+        By signing in or creating an account, you agree with our Terms and
+        Conditions and you have read our Privacy and Cookie Statement.
+      </p>
+    </div>
+  </body>
 </html>
