@@ -48,7 +48,6 @@ body {
 
   .mobile-nav-toggle {
     display: block;
-
     border-radius: 50%;
     padding: 5px;
     z-index: 1000;

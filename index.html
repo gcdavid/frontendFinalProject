@@ -17,63 +17,62 @@
             Booking group
           </h2>
         </a>
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="nav"
-          aria-expanded="false"
-        >
-          <img src="assets/svg/menu.svg" alt="menu" id="menu-img" />
-        </button>
-        <ul
-          role="list"
-          data-visible="false"
-          class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
-        >
-          <!-- <a href="index.html"> -->
-          <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-            Home
-          </li>
-          <!-- </a> -->
-          <a href="about.html">
+
+        <div class="flex gap-8 items-center">
+          <button
+            class="mobile-nav-toggle order-last"
+            aria-controls="nav"
+            aria-expanded="false"
+          >
+            <img src="assets/svg/menu.svg" alt="menu" id="menu-img" />
+          </button>
+          <ul
+            role="list"
+            data-visible="false"
+            class="nav-list py-4 font-[400] cursor-pointer text-sm md:flex items-center justify-center gap-6"
+          >
+            <!-- <a href="index.html"> -->
             <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-              About
+              Home
             </li>
-          </a>
-          <a href="careers.html">
-            <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
-              Careers
-            </li>
-          </a>
+            <!-- </a> -->
+            <a href="about.html">
+              <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+                About
+              </li>
+            </a>
+            <a href="careers.html">
+              <li class="nav-item py-2 px-5 hover:bg-[#1a4fa0] rounded-[25px]">
+                Careers
+              </li>
+            </a>
+          </ul>
           <button
             class="border w-10 h-10 flex items-center justify-center text-lg rounded-full border-yellow-500 relative"
             id="accountBtn"
           >
             <span>S</span>
           </button>
+        </div>
 
-          <div
-            class="flex flex-col gap-3 bg-white absolute bottom-34 text-black p-2 rounded-md top-16 right-2 md:right-8 z-50 transition ease-in-out"
-            id="dropdownMenu"
-          >
-            <a href="account.html">
-              <div class="flex gap-2 h-full hover:bg-gray-300 rounded-lg p-2">
-                <img src="assets/svg/person.svg" class="w-[20px]" alt="" />
-                <span>My account</span>
-              </div>
-            </a>
+        <div
+          class="flex flex-col gap-3 bg-white absolute bottom-34 text-black p-2 rounded-md top-16 right-20 md:right-8 z-50 transition ease-in-out"
+          id="dropdownMenu"
+        >
+          <a href="account.html">
+            <div class="flex gap-2 h-full hover:bg-gray-300 rounded-lg p-2">
+              <img src="assets/svg/person.svg" class="w-[20px]" alt="" />
+              <span>My account</span>
+            </div>
+          </a>
 
-            <a href="trip.html">
-              <div class="flex gap-2 h-full hover:bg-gray-300 p-2 rounded-lg">
-                <img
-                  src="assets/svg/unfilledStar.svg"
-                  class="w-[20px]"
-                  alt=""
-                />
-                <span>Saved trips</span>
-              </div>
-            </a>
-          </div>
-        </ul>
+          <a href="trip.html">
+            <div class="flex gap-2 h-full hover:bg-gray-300 p-2 rounded-lg">
+              <img src="assets/svg/unfilledStar.svg" class="w-[20px]" alt="" />
+              <span>Saved trips</span>
+            </div>
+          </a>
+        </div>
       </nav>
 
       <section class="px-2 py-8 md:p-8 bg-[#003b95] relative w-full">
@@ -144,7 +143,7 @@
         </div>
       </section>
 
-      <section class="p-2 my-8 md:px-8">
+      <section class="p-2 my-8 md:px-8 md:mt-20">
         <div class="mb-4">
           <h2 class="text-2xl font-bold">Trending destinations</h2>
           <span class="text-gray-600"
