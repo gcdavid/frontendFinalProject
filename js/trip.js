@@ -24,7 +24,7 @@ function createTripElement(trip) {
 
   for (let i = 0; i < Math.floor(trip.rating); i++) {
     const ratingStar = document.createElement("img");
-    ratingStar.src = "../assets/img/svg/star.svg";
+    ratingStar.src = "../assets/svg/star.svg";
     ratingStar.alt = "liked";
     ratingStar.classList.add("w-[20px]");
     ratingWrapper.appendChild(ratingStar);
@@ -33,7 +33,7 @@ function createTripElement(trip) {
   const decimalPart = trip.rating % 1;
   if (decimalPart > 0) {
     const halfStar = document.createElement("img");
-    halfStar.src = "../assets/img/svg/halfstar.svg";
+    halfStar.src = "../assets/svg/halfstar.svg";
     halfStar.alt = "half star";
     halfStar.classList.add("w-[16px]");
     ratingWrapper.appendChild(halfStar);
@@ -143,7 +143,7 @@ function createTripElement(trip) {
     "cancel-trip"
   );
   const cancelIcon = document.createElement("img");
-  cancelIcon.src = "close.svg";
+  cancelIcon.src = "../assets/svg/close.svg";
   cancelIcon.alt = "close-icon";
   cancelIcon.classList.add("w-[30px]", "rounded-full");
   cancelTripWrapper.appendChild(cancelIcon);
