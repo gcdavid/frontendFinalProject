@@ -26,7 +26,6 @@ request.onsuccess = function (event) {
 
       if (userData) {
         if (userData.password === password) {
-          console.log("Login successful");
           window.location.href = "../index.html";
         } else {
           alert("Incorrect password");

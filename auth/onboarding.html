@@ -54,14 +54,15 @@
         <div class="mb-4 flex flex-col">
           <label class="font-semibold text-lg">Enter your year of birth</label>
           <input
-            type="number"
-            placeholder="Year of birth"
-            class="input-field p-2 my-2 rounded-lg"
-            name="dob"
-            min="1900"
-            max="2024"
-            required
-          />
+      type="date"
+      placeholder="Year of birth"
+      class="input-field p-2 my-2 rounded-lg"
+      name="dob"
+      min="1900-01-01"
+      max="2024-12-31"
+      required
+      id="dobInput"
+    />
         </div>
 
         <div class="mb-4">

@@ -379,14 +379,20 @@
         </div>
       </section>
 
-      <footer class="bg-[#0d2857] text-white font-semibold px-4 py-8 md:px-16">
+      <footer
+        class="bg-[#0d2857] text-white font-semibold px-4 py-8 md:px-8 sm:px-4"
+      >
         <div class="grid grid-cols-2 gap-12 justify-between md:flex">
           <div>
             <h3 class="mb-4">Contact us</h3>
             <div class="flex flex-col gap-4">
               <h3>Toll Free Customer Care</h3>
-              <h3>+(1) 123 456 7890</h3>
-              <img src="assets/svg/qr.svg" alt="" class="w-[120px]">
+              <a href="tel: +1234567890">
+                <h3>+(1) 123 456 7890</h3>
+              </a>
+              <a href="mailto: support@booking.com">
+                <h3>support@booking.com</h3>
+              </a>
             </div>
           </div>
 
@@ -428,31 +434,27 @@
           <div>
             <h3 class="mb-4">Mobile</h3>
 
-            <a href="http://itunes.apple.com/lb/app" target="_blank">
-              <div
-                class="border py-4 px-2 mb-2 rounded-[10px] flex items-center gap-4 w-[160px]"
-              >
-                <img
-                  src="assets/svg/apple.svg"
-                  alt="apple icon"
-                  class="h-[32px] w-[32px]"
-                />
-                <span>Download on the Apple Store</span>
-              </div>
-            </a>
+            <div
+              class="border py-4 px-2 mb-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="assets/svg/apple.svg"
+                alt="apple icon"
+                class="h-[32px] w-[32px]"
+              />
+              <span>Download on the Apple Store</span>
+            </div>
 
-            <a href="http://play.google.com/store/apps" target="_blank">
-              <div
-                class="border py-4 px-2 rounded-[10px] flex items-center gap-4 w-[160px]"
-              >
-                <img
-                  src="assets/svg/google.svg"
-                  alt="google icon"
-                  class="h-[32px] w-[32px] rounded-[8px]"
-                />
-                <span>Get in the Google Play</span>
-              </div>
-            </a>
+            <div
+              class="border py-4 px-2 rounded-[10px] flex items-center gap-4 w-[160px]"
+            >
+              <img
+                src="assets/svg/google.svg"
+                alt="google icon"
+                class="h-[32px] w-[32px] rounded-[8px]"
+              />
+              <span>Get in the Google Play</span>
+            </div>
           </div>
         </div>
 
@@ -466,30 +468,67 @@
             <span>Site Map</span>
           </div>
           <div class="flex gap-6">
-            <a href="https://www.instagram.com/shady_khatri/" target="_blank">
-              <img
-                src="assets/img/instagram.png"
-                class="w-[32px] h-[32px] bg-white rounded-[8px]"
-              />
-            </a>
-            <a href="https://www.facebook.com/shady.khatri/" target="_blank">
-              <img
-                src="assets/img/facebook.png"
-                class="w-[32px] h-[32px] bg-white rounded-[8px]"
-              />
-            </a>
-
-            <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-menu-homepage&_ga=2.234343390.1988618821.1713639013-653945952.1709143025" target="_blank">
-              <img
-                src="assets/img/indeed.png"
-                class="w-[32px] h-[32px] bg-white rounded-[8px]"
-              />
-            </a>
+            <img
+              src="assets/img/facebook.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="assets/img/instagram.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
+            <img
+              src="assets/img/indeed.png"
+              class="w-[32px] h-[32px] bg-white rounded-[8px]"
+            />
           </div>
         </div>
       </footer>
     </main>
     <script src="js/app.js"></script>
     <script src="js/trip.js"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+      const request = indexedDB.open("registrationDB", 1);
+
+      request.onerror = function (event) {
+        console.log("Database error: " + event.target.errorCode);
+      };
+
+      request.onsuccess = function (event) {
+        const db = event.target.result;
+
+        // Check if the user is logged in
+        const transaction = db.transaction("users");
+        const objectStore = transaction.objectStore("users");
+
+
+        // Assuming you have stored login status under a key like "loggedIn"
+        const request = objectStore.getAll()
+
+        console.log(request, 'req')
+
+        request.onsuccess = function (event) {
+          const loggedIn = event.target.result;
+          console.log(loggedIn)
+
+          if (!loggedIn.length) {
+            window.location.href = "auth/register.html"; // Redirect to login page if not logged in
+          }
+        };
+
+        request.onerror = function (event) {
+          console.log("Error retrieving login status: " + event.target.errorCode);
+        };
+      };
+
+      request.onupgradeneeded = function (event) {
+        const db = event.target.result;
+        // Create an object store to store login status if not already created
+        if (!db.objectStoreNames.contains("registrationDB")) {
+          db.createObjectStore("users");
+        }
+      };
+    });
+    </script>
   </body>
 </html>

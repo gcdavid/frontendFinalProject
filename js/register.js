@@ -33,14 +33,14 @@ request.onsuccess = function (event) {
       return alert("Both of your password should be same.");
     }
 
-    // Add the object to the object store
-    const request = objectStore.add(userData);
+    // Add the object to the object store with email as the key
+    const request = objectStore.add(userData, email);
 
     request.onsuccess = function (event) {
       alert(`User with ${email} created.`);
       // Clear the form after successful submission
       registerForm.reset();
-      window.location.href = "onboarding.html"
+      window.location.href = "onboarding.html";
     };
 
     request.onerror = function (event) {
