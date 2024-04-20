@@ -143,7 +143,7 @@ function createTripElement(trip) {
     "cancel-trip"
   );
   const cancelIcon = document.createElement("img");
-  cancelIcon.src = "close.svg";
+  cancelIcon.src = "../assets/svg/close.svg";
   cancelIcon.alt = "close-icon";
   cancelIcon.classList.add("w-[30px]", "rounded-full");
   cancelTripWrapper.appendChild(cancelIcon);
