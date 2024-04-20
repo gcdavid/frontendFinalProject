@@ -176,11 +176,15 @@ function createTripElement(trip) {
 
     getStatus.onsuccess = () => {
       isLiked = getStatus.result !== undefined && getStatus.result !== null;
-      unfilledStar.src = isLiked
-        ? "../assets/svg/heart.svg"
-        : "../assets/svg/unfilledStar.svg";
+      if(isLiked) {
+        unfilledStar.src = 'assets/svg/heart.svg'
+      } else {
+        unfilledStar.src = 'assets/svg/unfilledStar.svg'
+      }
+      
       unfilledStar.style.display = isLiked ? "block" : "hidden";
     };
+    
 
     getStatus.onerror = () => {
       console.log("error");
@@ -219,9 +223,11 @@ function createTripElement(trip) {
     getSavedTrips(db);
 
     unfilledStar.addEventListener("click", () => {
-      unfilledStar.src = isLiked
-        ? "../assets/svg/unfilledStar.svg"
-        : "../assets/svg/heart.svg";
+      if(isLiked) {
+        unfilledStar.src = 'assets/svg/unfilledStar.svg'
+      } else {
+        unfilledStar.src = 'assets/svg/heart.svg'
+      }
 
       const tx = db.transaction("savedTrips", "readwrite");
       const store = tx.objectStore("savedTrips");
@@ -257,7 +263,7 @@ function createTripElement(trip) {
   const ratingStarWrapper = document.createElement("div");
   for (let i = 0; i < Math.floor(trip.rating); i++) {
     const ratingStar = document.createElement("img");
-    ratingStar.src = "../assets/svg/star.svg";
+    ratingStar.src = "assets/svg/star.svg";
     ratingStar.alt = "liked";
     ratingStar.classList.add("w-[20px]");
     ratingWrapper.appendChild(ratingStar);
@@ -268,7 +274,7 @@ function createTripElement(trip) {
   const decimalPart = trip.rating % 1;
   if (decimalPart > 0) {
     const halfStar = document.createElement("img");
-    halfStar.src = "../assets/svg/halfstar.svg";
+    halfStar.src = "assets/svg/halfstar.svg";
     halfStar.alt = "half star";
     halfStar.classList.add("w-[16px]");
     ratingWrapper.appendChild(halfStar);
