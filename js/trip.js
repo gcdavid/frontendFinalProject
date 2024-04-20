@@ -24,7 +24,7 @@ function createTripElement(trip) {
 
   for (let i = 0; i < Math.floor(trip.rating); i++) {
     const ratingStar = document.createElement("img");
-    ratingStar.src = "star.svg";
+    ratingStar.src = "../assets/img/svg/star.svg";
     ratingStar.alt = "liked";
     ratingStar.classList.add("w-[20px]");
     ratingWrapper.appendChild(ratingStar);
