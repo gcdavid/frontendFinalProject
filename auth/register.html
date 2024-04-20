@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js//register.js" defer></script>
+    <title>Register page</title>
+  </head>
+  <body>
+    <nav class="bg-[#003b95]">
+      <h2 class="text-white h-[60px] text-xl font-bold px-2 py-4">
+        Booking.com
+      </h2>
+    </nav>
+    <form
+      class="flex flex-col justify-center items-center h-[calc(100%-50px)]"
+      id="register"
+    >
+      <h2 class="text-4xl font-bold mb-4 w-[350px] mt-8">Create an account.</h2>
+      <div class="flex flex-col mb-4">
+        <label class="font-[500] mb-2">Enter your E-mail address</label>
+        <input
+          type="text"
+          placeholder="Email"
+          class="border-2 border-[#e0e0e0]-600 h-[45px] rounded-[5px] w-[350px] p-2 font-[400]"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col mb-4">
+        <label class="font-[500] mb-2">Enter your password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          class="border-2 border-[#e0e0e0]-600 rounded-[5px] h-[45px] w-[350px] p-2 font-[400]"
+          name="password"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col mb-4">
+        <label class="font-[500] mb-2">Enter your password again</label>
+        <input
+          type="password"
+          placeholder="Password"
+          class="border-2 border-[#e0e0e0]-600 rounded-[5px] h-[45px] w-[350px] p-2 font-[400]"
+          name="repassword"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col w-[350px] mb-4">
+        <button class="bg-[#006ce4] text-white px-4 py-2 rounded-[5px] text-xl">
+          Sign up
+        </button>
+      </div>
+    </form>
+
+    <div class="text-sm text-center my-4 font-normal">
+      <span>Already have an account yet?</span>
+      <a href="login.html">
+        <span class="text-blue-600 hover:cursor-pointer hover:underline"
+          >Login here</span
+        >
+      </a>
+    </div>
+  </body>
+</html>
