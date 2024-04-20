@@ -51,5 +51,4 @@ request.onsuccess = function (event) {
 request.onupgradeneeded = function (event) {
   const db = event.target.result;
   const objectStore = db.createObjectStore("users", { keyPath: "email" });
-  console.log("Object store created");
 };
