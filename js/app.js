@@ -176,9 +176,11 @@ function createTripElement(trip) {
 
     getStatus.onsuccess = () => {
       isLiked = getStatus.result !== undefined && getStatus.result !== null;
-      unfilledStar.src = isLiked
-        ? "../assets/svg/heart.svg"
-        : "../assets/svg/unfilledStar.svg";
+      if(isLiked) {
+        unfilledStar.src = 'assets/svg/heart.svg'
+      } else {
+        unfilledStar.src = 'assets/svg/unfilledStar.svg'
+      }
       unfilledStar.style.display = isLiked ? "block" : "hidden";
     };
 
