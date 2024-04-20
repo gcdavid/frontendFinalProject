@@ -219,7 +219,9 @@ function createTripElement(trip) {
     getSavedTrips(db);
 
     unfilledStar.addEventListener("click", () => {
-      unfilledStar.src = isLiked ? "unfilledStar.svg" : "heart.svg";
+      unfilledStar.src = isLiked
+        ? "../assets/svg/unfilledStar.svg"
+        : "../assets/svg/heart.svg";
 
       const tx = db.transaction("savedTrips", "readwrite");
       const store = tx.objectStore("savedTrips");

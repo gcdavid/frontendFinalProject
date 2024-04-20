@@ -33,7 +33,7 @@ function createTripElement(trip) {
   const decimalPart = trip.rating % 1;
   if (decimalPart > 0) {
     const halfStar = document.createElement("img");
-    halfStar.src = "halfstar.svg";
+    halfStar.src = "../assets/svg/halfstar.svg";
     halfStar.alt = "half star";
     halfStar.classList.add("w-[16px]");
     ratingWrapper.appendChild(halfStar);
@@ -128,7 +128,7 @@ function createTripElement(trip) {
     const tripId = e.currentTarget.dataset.tripId;
     deleteSavedTrip(db, tripId)
       .then(() => {
-        renderUpdatedTrips(trips);
+        renderUpdatedTrips(trip);
       })
       .catch((error) => {
         console.error(error);
